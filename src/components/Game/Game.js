@@ -16,9 +16,10 @@ function Game() {
     const nextGuess = { guess: newGuess, id: crypto.randomUUID() };
     setGuesses([...guesses, newGuess]);
   }
+
   return (
     <>
-      <GuessResults guesses={guesses} />
+      <GuessResults answer={answer} guesses={guesses} />
       <GuessInput handleGuess={handleGuess} />
     </>
   );
